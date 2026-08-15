@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Weather App</h1>
+            <p>Get real-time weather information</p>
+        </header>
+
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search city..."
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn">
+                    🔍 Search
+                </button>
+
+            </div>
+
+
+            <button id="locationBtn" class="location-btn">
+                📍 Use My Location
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+
+            <div class="loader"></div>
+
+            <p>Getting current weather...</p>
+
+        </div>
+
+
+        <!-- Error -->
+        <div id="error" class="error hidden">
+
+            <p id="errorText"></p>
+
+        </div>
+
+
+        <!-- Weather Information -->
+        <main id="weatherContainer" class="weather-container hidden">
+
+            <!-- Location -->
+            <section class="location">
+
+                <h2 id="cityName">Delhi</h2>
+
+                <p id="countryName">India</p>
+
+                <p id="dateTime">
+                    Current weather
+                </p>
+
+            </section>
+
+
+            <!-- Main Weather -->
+            <section class="main-weather">
+
+                <div class="weather-icon">
+
+                    <img
+                        id="weatherIcon"
+                        src=""
+                        alt="Weather condition"
+                    >
+
+                </div>
+
+
+                <div class="temperature">
+
+                    <h2>
+                        <span id="temperature">--</span>°C
+                    </h2>
+
+                    <p id="weatherDescription">
+                        --
+                    </p>
+
+                    <p class="feels">
+                        Feels like
+                        <span id="feelsLike">--</span>°C
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Weather Details -->
+            <section class="weather-details">
+
+                <!-- Humidity -->
+                <div class="weather-detail">
+
+                    <div class="detail-icon">
+                        💧
+                    </div>
+
+                    <div>
+                        <p>Humidity</p>
+
+                        <h3>
+                            <span id="humidity">--</span>%
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <!-- Wind -->
+                <div class="weather-detail">
+
+                    <div class="detail-icon">
+                        💨
+                    </div>
+
+                    <div>
+                        <p>Wind Speed</p>
+
+                        <h3>
+                            <span id="windSpeed">--</span>
+                            km/h
+                        </h3>
+                    </div>
+
+                </div>
+                <!-- Pressure -->
+                <div class="weather-detail">
+
+                    <div class="detail-icon">
+                        🌡️
+                    </div>
+
+                    <div>
+                        <p>Pressure</p>
+
+                        <h3>
+                            <span id="pressure">--</span>
+                            hPa
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <!-- Visibility -->
+                <div class="weather-detail">
+
+                    <div class="detail-icon">
+                        👁️
+                    </div>
+
+                    <div>
+                        <p>Visibility</p>
+
+                        <h3>
+                            <span id="visibility">--</span>
+                            km
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <!-- Sunrise -->
+                <div class="weather-detail">
+
+                    <div class="detail-icon">
+                        🌅
+                    </div>
+
+                    <div>
+                        <p>Sunrise</p>
+
+                        <h3 id="sunrise">
+                            --
+                        </h3>
+                    </div>
+
+                </div>
+
+
+                <!-- Sunset -->
+                <div class="weather-detail">
+
+                    <div class="detail-icon">
+                        🌇
+                    </div>
+
+                    <div>
+                        <p>Sunset</p>
+
+                        <h3 id="sunset">
+                            --
+                        </h3>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Last Updated -->
+            <p class="updated">
+
+                Last updated:
+                <span id="lastUpdated">--</span>
+
+            </p>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
