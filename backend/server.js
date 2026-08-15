@@ -209,8 +209,9 @@ app.get("/api/weather/location", async (req, res) => {
 
 });
 // Start server
-const server = app.listen(PORT, "127.0.0.1", () => {
-    console.log(`Weather server running on http://127.0.0.1:${PORT}`);
+// Start server
+const server = app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Weather server running on port ${PORT}`);
 });
 
 server.on("error", (error) => {
